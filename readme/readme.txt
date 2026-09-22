@@ -53,6 +53,12 @@ automatic calculation in typing '=' char
    insert result into text.
 
 
+ctrl+down
+---------
+
+in lite lexer 'Calc ^' if in line has '=' pressing 'ctrl+down' allows for further calculations using that result after '=' on next line
+
+
 about
 -----
 
