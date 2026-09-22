@@ -51,12 +51,12 @@ safe_dict = {
 
 def do_eval(s):
     r = eval(s, {"__builtins__": None}, safe_dict)
+    r = f"{r:g}"
     if r:
         return str(r)
 
 
 class Command:
-
     def __init__(self):
         global sep_dec
         global sep_th
@@ -77,7 +77,6 @@ class Command:
         self.do_work('ins_sel')
 
     def do_work(self, mode):
-
         carets = ed.get_carets()
         if len(carets)>1:
             msg_status(_('[Calc Expression] Multi-carets not supported'))
@@ -128,7 +127,6 @@ class Command:
         s = s.replace(chr(1), sep_th)
         s = s.replace(chr(2), sep_dec)
 
-
         if mode=='rep':
             #sort coord
             x0, y0, x1, y1 = carets[0]
@@ -176,7 +174,7 @@ class Command:
 
     def on_key(self, ed_self, key, state):
         carets = ed_self.get_carets()
-        #dont support multi-carets
+        # dont support multi-carets
         if len(carets)>1: return
 
         if key == 187 and state == '':

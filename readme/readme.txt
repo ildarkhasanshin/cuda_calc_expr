@@ -48,7 +48,7 @@ automatic calculation in typing '=' char
 1. copy file _test/Calc.cuda-litelexer to the CudaText's folder data/lexliblite.
    this makes 'Calc' lite lexer visible in the program's lexers menu.
    this lexer is attached to *.calc file extension.
-2. activate 'Calc' lite lexer when you edit a formula in plain text file.
+2. activate 'Calc ^' lite lexer when you edit a formula in plain text file.
 3. type '=' char after formula - it will make automatic calculation and
    insert result into text.
 
