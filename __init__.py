@@ -97,6 +97,7 @@ class Command:
         s = s.replace(chr(2), '')
         s = s.replace(chr(3), ',')
         s = s.replace(':', '/')
+        s = s.replace('^', '**')
         s = s.rstrip('= ')
 
         try:
